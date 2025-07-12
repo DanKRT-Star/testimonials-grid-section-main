@@ -62,6 +62,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 10px;
+    
 }
 
 .blog .user-container img {
@@ -113,7 +114,31 @@ main {
     }
 
     .blog.blog1 {
+        position: relative;
         grid-area: blog1;
+    }
+
+    .blog.blog1::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        width: 100px;
+        height: 100px;
+        background-image: url('./images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    .blog.blog1 .user-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .blog.blog1 h2 {
+        position: relative;
+        z-index: 1;
     }
 
     .blog.blog2 {
